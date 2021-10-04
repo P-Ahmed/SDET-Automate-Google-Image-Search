@@ -28,8 +28,10 @@ public class AutomateGoogleImageSearch {
         Thread.sleep(3000);
         driver.findElement(By.xpath("//a[contains(text(),'Images')]")).click();
         driver.findElement(By.cssSelector("[aria-label='Search by image']")).click();
-        Thread.sleep(2000);
         driver.findElement(By.xpath("//a[contains(text(),'Upload an image')]")).click();
+
+        //image path should be changed according to your own image path
+
         driver.findElement(By.cssSelector("[name='encoded_image']")).sendKeys("D:\\Torrent\\Wallpaperswide.com\\4K\\3d_sun_system_2-wallpaper-3840x2160.jpg");
         Thread.sleep(8000);
         String text = driver.getTitle();
